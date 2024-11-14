@@ -1,0 +1,698 @@
+/* General CSS */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Montserrat:wght@400;500;700;800;900&display=swap');
+
+*,
+*::before,
+*::after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    outline: none;
+}
+
+:root {
+
+    --primary-color: #008AFC;
+    --secondary-color: #014EBC;
+    --light-pink-color: #FFFCF8;
+    --light-color: #CCCCCC;
+    --black-color: #000;
+    --white-color: #fff;
+    --box-shadow: 0.1rem -0.07rem 1.5rem 0.3rem rgb(0 0 0 / 26%);
+
+    --primary-font: 'Lato', sans-serif;
+    --secondary-font: 'Montserrat', sans-serif;
+}
+
+body,
+html {
+    font-size: 10px;
+    font-weight: 400;
+    font-family: var(--primary-font);
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    line-height: 1.5;
+}
+
+h1 {
+    color: var(--black-color);
+    font-size: 5.5rem;
+    font-weight: 800;
+    font-family: var(--secondary-font);
+    display: inline-block;
+    text-transform: uppercase;
+    line-height: 1.4;
+    margin-bottom: 2rem;
+}
+
+h2 {
+    color: var(--white-color);
+    font-size: 4rem;
+    font-weight: 700;
+    font-family: var(--secondary-font);
+    display: inline-block;
+    text-transform: uppercase;
+    line-height: 1.4;
+    margin-bottom: 2rem;
+}
+
+h2 span {
+    color: var(--primary-color);
+}
+
+h3 {
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 1.3;
+    font-family: var(--secondary-font);
+    color: var(--white-color);
+    margin-bottom: 1rem;
+}
+
+h4 {
+    font-size: 3rem;
+    font-weight: 500;
+    line-height: 1;
+    font-family: var(--secondary-font);
+    color: var(--black-color);
+    margin-bottom: 2rem;
+}
+
+h5 {
+    font-size: 1.6rem;
+    line-height: 1.5;
+    color: var(--white-color);
+    font-family: var(--secondary-font);
+    margin-bottom: 0.9375rem;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+p {
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 1px;
+    margin-top: 1rem;
+    color: var(--white-color);
+}
+
+a,
+a:active,
+a:focus,
+a:hover,
+.btn:focus {
+    text-decoration: none!important;
+    box-shadow: none;
+    outline: 0;
+}
+
+.bg-black {
+    background-color: var(--black-color);
+}
+
+.main-btn {
+    color: var(--white-color);
+    background-color: var(--primary-color);
+    border-radius: 5rem;
+    text-transform: capitalize;
+    padding: 0.9rem 3rem;
+    font-family: var(--secondary-font);
+    font-weight: 500;
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+    transition: all .3s linear;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .3);
+}
+
+.main-btn:hover {
+    background: var(--secondary-color);
+    color: var(--white-color);
+}
+
+.view-link {
+    font-size: 1.4rem;
+    margin-top: 1rem;
+    color: var(--white-color);
+    transition: all 0.3s ease-in-out;
+}
+
+.view-link:hover {
+    color: var(--white-color);
+    font-size: 1.6rem;
+}
+
+
+.wrapper {
+    padding: 8rem 0;
+}
+
+.sec-title h1 {
+    position: relative;
+}
+
+.sec-title h1::after {
+    position: absolute;
+    content: '';
+    background-color: var(--primary-color);
+    width: 50%;
+    height: 50%;
+    right: -4px;
+    bottom: 0%;
+    opacity: 0.5;
+}
+
+/*--------------- 01 navbar css--------------- */
+.navbar-brand {
+    font-size: 2rem!important;
+    color: var(--secondary-color);
+    font-family: var(--secondary-font);
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+
+}
+.header {
+    background-color: var(--black-color);
+    padding: 1rem 0;
+}
+
+.header .navbar-brand img {
+    width: 20rem;
+    height: auto;
+    object-fit: cover;
+}
+
+.header .navbar-nav .nav-link {
+    color: var(--white-color);
+    font-family: var(--secondary-font);
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    font-weight: 600;
+    padding: 0.5rem 2rem;
+    margin: 0px 0.2rem;
+}
+
+
+.header .navbar-toggler {
+    color: var(--white-color);
+    font-size: 2rem;
+    height: 2.7rem;
+    padding: 0;
+}
+
+.header .navbar-toggler:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+/* --------------2 Banner Section ----------------*/
+
+.banner-wrapper {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding-bottom: 5rem;
+    overflow: hidden; 
+}
+.banner-para{
+    margin-top: 70px!important;
+}
+.banner-para.main-btn{
+    margin-top: 95px!important;
+}
+.background-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    transform: translate(-50%, -50%);
+    z-index: -1; 
+}
+.banner-wrapper::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); 
+    z-index: 0; 
+}
+
+
+.wrapper .container {
+    position: relative;
+    z-index: 1; 
+    /* margin-top: 8rem; */
+}
+.box{
+    position: relative;
+    width: 500px;
+    height: 500px;
+    background: rgb(0,0,0.5);
+    border-radius: 50%;
+    overflow: hidden;
+}
+.box::before{
+    content: "";
+    position: absolute;
+    inset: -10px 140px;
+    background: linear-gradient(315deg, var(--secondary-color),var(--light-pink-color));
+    transition: 0.5s;
+    animation: animate 4s linear infinite;
+}
+.box:hover::before{
+   
+    inset: -10px 140px;
+   
+}
+@keyframes animate {
+    0%{
+        transform: rotate(0deg);
+    }
+    0%{
+        transform: rotate(360deg);
+    }
+}
+.box::after{
+    content: "";
+    position: absolute;
+    inset: 6px;
+    background: var(--light-color);
+    border-radius: 50%;
+    transition: 0.5s;
+    animation: animate 4s linear infinite;
+}
+.img-content{
+    position: absolute;
+    inset: 30px;
+    border: 3px solid var(--black-color);
+    z-index: 3;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.img-content img{
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+}
+
+/* ----3 about us home------  */
+
+.about-parallax {
+    position: relative;
+    background-position: left;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: inline-block;
+    align-items: center;
+    width: 100%;
+    height: 50vh;
+}
+.about-parallax.img1 {
+    background-image: url('../images//home/team.jpg');
+    height: 100%;
+    background-size: cover;
+
+}
+.about-parallax.serv-img {
+    background-image: url('../images//service/service-banner.jpg');
+    height: 100%;
+    background-size: cover;
+
+}
+.about-parallax.port-img {
+    background-image: url('../images//porfolio/portfolio-banner.jpg');
+    height: 100%;
+    background-size: cover;
+  
+
+}
+.about-parallax-main {
+    position: relative;
+    background-position: right;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: inline-block;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+.about-wrapper {
+    margin-top: 80vh;
+    background-color: var(--white-color);
+    width: 100%;
+}
+.about-container{
+    padding: 20px 30px;
+}
+/* ICONBOX */
+.iconbox {
+    width: 70px;
+    height: 70px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #968888;
+    color: #fff;
+    font-size: 34px;
+    flex: none;
+}
+/* 4-image parallax-effetct */
+
+.parallax {
+    position: relative;
+    background-position: left;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: inline-block;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.parallax-1 {
+    position: relative;
+    background-position: right;
+    background-size: 48%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: inline-block;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.parallax-main {
+    position: relative;
+    background-position: right;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: inline-block;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.parallax.img1 {
+    background-image: url('../images//home/team.jpg');
+    height: 100%;
+    background-size: cover;
+
+}
+
+.parallax.img2 {
+    background-image: url('../images//home/Banner3.jpg');
+    height: 608px;
+}
+
+.parallax.img3 {
+    background-image: url('../images//home/team.jpg');
+    height: 608px;
+}
+
+.parallax.img4 {
+    background-image: url('../images//home/Banner5.jpg');
+    height: 608px;
+}
+
+.parallax.img5 {
+    background-image: url('../images//home/team2.jpg');
+    height: 608px;
+} 
+.main-wrapper {
+    /* margin-top: 80vh; */
+    background-color: var(--white-color);
+    width: 100%;
+}
+
+.main-wrapper .black-card {
+    position: absolute;
+    top: 25%;
+    left: -400px;
+    width: calc(100% - 20%);
+    box-shadow: var(--box-shadow);
+    border-radius: 2.5rem;
+    background-color: var(--black-color);
+    padding: 2.5rem;
+    text-align: left;
+    z-index: 1;
+}
+
+.main-wrapper .black-card.right {
+    right: -400px;
+    left: unset;
+}
+
+
+/*----- 5 portfolio styling CSS --------*/
+.image-zoom {
+    position: relative;
+}
+
+.image-zoom-wrapper {
+    overflow: hidden;
+    position: relative;
+}
+
+.image-zoom-wrapper img{
+     transition: all 0.5s ease;
+}
+
+.image-zoom:hover .image-zoom-wrapper img {
+    transform: scale(1.1);
+    opacity:0.7;
+    
+
+}
+/* PORTFOLIO */
+.portfolio-item .iconbox {
+    background-color: black;
+    color: white;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+}
+
+.portfolio-item:hover .iconbox {
+    opacity: 1;
+    top: 50%;
+    padding: 50px 90px;
+
+}
+.work-wrapper {
+    background: var(--black-color);
+}
+
+/* 6 Testimonial CSS */
+.testimonial-wrapper h1 {
+    color: var(--black-color);
+    font-size: 60px!important;
+
+
+}
+
+.testimonial-wrapper .card {
+    border: none;
+    background-color: var(--light-pink-color);
+    box-shadow: var(--box-shadow);
+    border-radius: 1rem;
+    margin: 2rem;
+    padding: 4rem 2rem;
+    height: 60vh!important
+}
+
+.testimonial-wrapper .card i {
+    color: rgb(255, 191, 0);
+    font-size: 1.4rem;
+}
+
+.testimonial-wrapper .card p {
+    color: var(--black-color);
+}
+
+.testimonial-wrapper .card h5 {
+    color: var(--black-color);
+    font-weight: 700;
+}
+
+.testimonial-wrapper .carousel-indicators {
+    margin-bottom: -3rem;
+}
+
+.testimonial-wrapper .carousel-indicators button {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background-color: var(--black-color);
+}
+
+
+
+/* FOOTER */
+footer {
+    padding-top: 120px;
+}
+
+.footer-top {
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.footer-bottom {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+
+footer li,
+footer p,
+footer a {
+    color: rgba(255,255,255,0.7);
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer .line {
+    width: 40px;
+    height: 4px;
+    background-color: var(--secondary-color);
+    margin-top: 12px;
+    margin-bottom: 24px;
+}
+
+.social-icons a {
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255,255,255,0.1);
+    border-radius: 100px;
+}
+
+.social-icons a:hover {
+    background-color: var(--c-brand);
+    color: white;
+}
+
+
+
+/* =====================================
+About Page CSS 
+=======================================*/
+
+.about .abilities-wrapper ul {
+    list-style: none;
+    padding: 0;
+}
+
+.about .abilities-wrapper h3 {
+    color: var(--black-color);
+}
+
+.about .abilities-wrapper ul li p {
+    color: var(--black-color)
+}
+
+/* Team CSS */
+.about .team-wrapper .card .team-img {
+    width: 15rem;
+    height: 15rem;
+    margin: 0 auto;
+    border-radius: 50%;
+    border: 0.5rem solid var(--primary-color);
+}
+
+.about .team-wrapper .card .team-img img {
+    border-radius: 50%;
+}
+
+.about .team-wrapper .card .team-detail h5 {
+    font-weight: 800;
+    color: var(--black-color);
+    margin-bottom: 0;
+    padding-top: 1.5rem;
+}
+
+.about .team-wrapper .card .team-detail p {
+    color: var(--black-color);
+    margin: 0;
+}
+
+/* ====================================
+Portfolio Page CSS
+====================================== */
+
+.portfolio-services .card-detail {
+    box-shadow: var(--box-shadow);
+    background-color: var(--black-color);
+    border-radius: 2rem;
+    padding: 3rem;
+    margin-top: -2rem;
+}
+.portfolio-services .card-detail a.main-btn{
+    border-radius: 5rem;
+    padding: 0.6rem 2rem;
+
+}
+.portfolio-services .card-detail a{
+    text-align: start;
+
+
+}
+.portfolio-services .card-detail h5 {
+    font-weight: 800;
+    font-family: var(--secondary-font);
+}
+
+/* Process Css  */
+
+.process-wrapper {
+    background-color: var(--black-color);
+}
+
+.process-wrapper h1,
+.work-wrapper h1 {
+    color: var(--white-color);
+}
+
+.process-wrapper .process-content {
+    padding: 4rem 6rem;
+    position: relative;
+}
+
+.process-wrapper .process-content::after {
+    position: absolute;
+    content: '';
+    width: 40%;
+    margin: auto;
+    bottom: 0;
+    border-bottom: 1px solid var(--white-color);
+}
+
+.process-wrapper .process-content span {
+    color: var(--primary-color);
+    font-size: 7rem;
+    font-weight: 800;
+    margin-right: 2rem;
+}
